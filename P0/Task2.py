@@ -23,10 +23,13 @@ September 2016.".
 call_record = {}
 for record in calls:
     if record[0] not in call_record.keys():
-        call_record[record[0]] = record[-1]
-    call_record[record[0]] += record[-1]
+        call_record[record[0]] = int(record[-1])
+    if record[1] not in call_record.keys():
+        call_record[record[1]] = int(record[-1])
+    call_record[record[0]] += int(record[-1])
+    call_record[record[1]] += int(record[-1])
 total_time = sorted(call_record.values())
-total_time = total_time[0]
+total_time = total_time[-1]
 
 call_record = {v: k for k, v in call_record.items()}
 longest_number = call_record[total_time]

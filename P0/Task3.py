@@ -46,23 +46,30 @@ The percentage should have 2 decimal digits
 """
 
 # PART A
-codes = {"Bangalore": [], "Mobile": [], "Telemarketer": [], "OutgoingBangalore": []}
+people_of_bang = list()
+fixed_lines_out = []
+fixed_lines_in = []
 
 for record in calls:
-    if "(080)" in record[0]:
-        codes["Bangalore"].append((record[0]))
-        if "(080)" in record[1]:
-            codes["OutgoingBangalore"].append([record[1]])
-    if ("(" or ")") not in record[0]:
-        codes["Mobile"].append(record[0])
-    if "140" in record[0][:3]:
-        codes["Telemarketer"].append(record[0])
+    if "(080)" in record[0][:5]:
+        fixed_lines_out.append(record[0])
+        if "(0" in record[1][:2]:
+            left = record[1].find("(")
+            right = record[1].find(")")
+            people_of_bang.append(str(record[1][left:right+1]))
+        if "140" in record[1][:3]:
+            people_of_bang.append([record[1]])
+        if record[1][0] in ["7", "8", "9"]:
+            people_of_bang.append(record[1][:5])
+        if "(080)" in record[1][:5]:
+            fixed_lines_in.append(record[1])
 
-print(f"The numbers called by people in Bangalore have codes: {codes['Bangalore']}")
+people_of_bang = sorted(set(people_of_bang))
+build_string = '\n'.join(people_of_bang)
+
+
+print(f"The numbers called by people in Bangalore have codes: \n{build_string}")
 
 # Part B
-from_bang = len(codes["Bangalore"])
-to_bang = len(codes["OutgoingBangalore"])
-
-percent = 100 * (to_bang / from_bang)
+percent = 100 * (len(fixed_lines_in) / len(fixed_lines_out))
 print(f"{round(percent, 2)} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")

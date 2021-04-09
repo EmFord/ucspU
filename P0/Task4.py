@@ -25,21 +25,18 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
-outgoing_calls = set()
-incoming_calls = set()
-outgoing_texts = set()
-incoming_texts = set()
+callers = set()
+others = set()
+
 for record in calls:
-    outgoing_calls.add(record[0])
-    incoming_calls.add(record[1])
+    callers.add(record[0])
+    others.add(record[1])
 
 for record in texts:
-    outgoing_texts.add(record[0])
-    incoming_texts.add(record[1])
+    others.add(record[0])
+    others.add(record[1])
 
-calls_exc = outgoing_calls.difference(incoming_calls)
-calls_exc_minus_incoming = calls_exc.difference(incoming_texts)
-telemarketers = calls_exc_minus_incoming.difference(outgoing_texts)
+telemarketers = callers.difference(others)
 telemarketers = sorted(telemarketers)
 build_string = '\n'.join(telemarketers)
 
