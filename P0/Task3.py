@@ -60,7 +60,7 @@ for record in calls:
         if "140" in record[1][:3]:
             people_of_bang.append([record[1]])
         if record[1][0] in ["7", "8", "9"]:
-            people_of_bang.append(record[1][:5])
+            people_of_bang.append(record[1][:4])
         if "(080)" in record[1][:5]:
             fixed_lines_in.append(record[1])
 

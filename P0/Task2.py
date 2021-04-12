@@ -24,10 +24,14 @@ call_record = {}
 for record in calls:
     if record[0] not in call_record.keys():
         call_record[record[0]] = int(record[-1])
+    else:
+        call_record[record[0]] += int(record[-1])
+
     if record[1] not in call_record.keys():
         call_record[record[1]] = int(record[-1])
-    call_record[record[0]] += int(record[-1])
-    call_record[record[1]] += int(record[-1])
+    else:
+        call_record[record[1]] += int(record[-1])
+
 total_time = sorted(call_record.values())
 total_time = total_time[-1]
 
