@@ -1,0 +1,5 @@
+
+In this problem I chose to use a dict as the cache structure because it has easy lookups that
+are O(1) in complexity. I also utilzed a list to track the latest initlized items and remove the
+oldest and shrink the list. All lines are O(1) time complexity.
+
