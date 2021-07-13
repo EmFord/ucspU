@@ -1,0 +1,5 @@
+
+For this problem the time complexity is O(n) because of the one for loop that
+has to happen for the lookup if the key is being seen for the first time, otherwise,
+the key will be saved for quick lookup the next time.
+

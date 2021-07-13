@@ -1,0 +1,5 @@
+
+In this problem I have two for loops with a time complexity of O(n^k) because I have two dynamic
+for loops. I would like to avoid the second for loop but did not know how to flatten the array
+without doing so. This solution displays a use of recursion because it calls the funcntion within
+itself.
