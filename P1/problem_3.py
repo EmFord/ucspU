@@ -30,7 +30,7 @@ def huffman_encoding(data):
 
     #3
     i = 0
-    while i <= range(len(frequencies)):
+    while i <= len(frequencies):
         min_frq_1 = frequencies.pop(i)
         min_frq_1_num = list(min_frq_1)[1]
         min_frq_2 = frequencies.pop(i)

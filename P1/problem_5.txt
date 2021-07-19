@@ -1,0 +1,2 @@
+In this problem I created a singly linked list with the ability to print out the whole chain. The time complexity for this problem is O(n) for the while loops
+because the chain can be any length of values.
