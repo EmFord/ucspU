@@ -1,3 +1,4 @@
 
-The writing for this problem was very confusing. The time ocmplexity for this problem is O(n^2) because of the
-nested for loop.
+The writing for this problem was very confusing. The time complexity for this problem is O(n log n) because of the
+it is a tree sort with n length of items for sorting. The space complexity for a tree sorting is O(n)
+to account fo n number of items to sort.

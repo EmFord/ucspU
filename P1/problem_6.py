@@ -150,3 +150,37 @@ print("union", union(linked_list_3, linked_list_4))
 print("inter", intersection(linked_list_3, linked_list_4))
 
 
+# Test Case 5
+
+linked_list_3 = LinkedList()
+linked_list_4 = LinkedList()
+
+element_1 = []
+element_2 = [3, 4, 4, None]
+
+for i in element_1:
+    linked_list_3.append(i)
+
+for i in element_2:
+    linked_list_4.append(i)
+
+print("union", union(linked_list_3, linked_list_4))
+print("inter", intersection(linked_list_3, linked_list_4))
+
+
+# Test Case 6
+
+linked_list_3 = LinkedList()
+linked_list_4 = LinkedList()
+
+element_1 = []
+element_2 = []
+
+for i in element_1:
+    linked_list_3.append(i)
+
+for i in element_2:
+    linked_list_4.append(i)
+
+print("union", union(linked_list_3, linked_list_4))
+print("inter", intersection(linked_list_3, linked_list_4))

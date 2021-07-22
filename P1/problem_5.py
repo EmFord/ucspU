@@ -26,6 +26,9 @@ class BlockChain:
         self.head = None
 
     def add_on_chain(self, timestamp, data):
+        if timestamp is None or data is None:
+            return -1
+
         if self.head is None:
             self.head = Block(timestamp=timestamp, data=data, previous_hash=None)
             return
@@ -71,12 +74,22 @@ print(len(chain.show_chain())) # 6
 chain = BlockChain()
 chain.add_on_chain(timestamp="1:00", data=["secret data"])
 chain.add_on_chain(timestamp="2:00", data=["super secret data"])
-chain.add_on_chain(timestamp="3:00", data=["sakjslkajsljl"])
+chain.add_on_chain(timestamp="3:00", data=["extra secret data"])
 chain.add_on_chain(timestamp="2:00", data=None)
 print(chain.show_chain())
-print(len(chain.show_chain())) # 4
+print(len(chain.show_chain())) # 3
 
+#5. Create an empty block
+chain = BlockChain()
+chain.add_on_chain(timestamp=None, data=None)
+print(chain.show_chain())
+print(len(chain.show_chain())) # 0
 
-
-
-
+#6. Create with duplicate time
+chain = BlockChain()
+chain.add_on_chain(timestamp="one", data=["secret data"])
+print(chain.head.timestamp) # one
+chain.add_on_chain(timestamp="two", data=["secret data"])
+print(chain.head.timestamp) # one
+chain.add_on_chain(timestamp="three", data=["secret data"])
+print(chain.head.timestamp) # one

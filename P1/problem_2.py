@@ -17,6 +17,9 @@ def find_files(suffix, path):
     Returns:
        a list of paths
     """
+    if path is None:
+        return -1
+
     c_files = []
     for dir_item in os.listdir(path):
         print("Starting....", dir_item)
@@ -51,3 +54,5 @@ print(len(find_files("", PATH)))
 print(find_files("testdir", PATH))
 # []
 
+print(find_files("testdir", None))
+# -1

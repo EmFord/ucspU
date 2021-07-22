@@ -13,7 +13,7 @@ class LRU_Cache(object):
 
     def set(self, key, value):
         # Set the value if the key is not present in the cache. If the cache is at capacity remove the oldest item.
-        if self.capacity <= 0:
+        if self.capacity is None or self.capacity <= 0:
             return -1
 
         if len(self.cache_struct) >= self.capacity:
@@ -77,3 +77,16 @@ print(case_3.set("three", 3))
 # None
 print(case_3.get("three"))  
 # three
+
+
+# 4. Test with negative value
+case_4 = LRU_Cache(-3)
+print(case_4.set(1, 1)) # -1
+
+print(case_4.set(0, 0)) # -1
+
+# 5. Test with null capacity
+case_5 = LRU_Cache(None)
+print(case_5.set(1, 1)) # -1
+
+print(case_5.set(0, 0)) # -1

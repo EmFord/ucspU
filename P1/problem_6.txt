@@ -1,3 +1,4 @@
 For this problem I tried to avoid using nested for loops as much as possible and went with the idea of a key lookup with dicts.
 The time complexity for this problem is O(n) to account for looping through the lists and that the list length can be
-any size. The while loops and for loops are the same time complexity.
+any size. The while loops and for loops are the same time complexity. The space complexity for this solution is
+0(n) because the singly linked list can have n number of items in memeory.
