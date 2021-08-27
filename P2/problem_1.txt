@@ -1,0 +1,5 @@
+The solution for this problem to get O(log n) time complexity is to use a binary search.
+A while loop allows this efficency because it only need to loop through the range of the 
+number once but also narrows down the answer by not having to go through each item but
+sorts it by // 2. For example 8 -> 4 (for answer 16) instead of 1 -> 2 -> 3 ect...
+The space complexity is O(1).
