@@ -1,2 +1,2 @@
-This problme can be solved with a binary search (divide and conquer) algorithm. By dividing the array
+This problem can be solved with a binary search (divide and conquer) algorithm. By dividing the array
 the search can be speed  up to O(log n). Memory usage for this problem is O(1).

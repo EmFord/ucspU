@@ -1,0 +1,1 @@
+Time complexity is O(nlog(n)) with one while loop and one for loop seperate form each other. Space complexity is O(1) and does not require extra space.

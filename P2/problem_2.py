@@ -57,6 +57,6 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 10])
 
 
 # Tests
-test_function([6, 7, 8, None, 10, 1, 2, 3, 4], 6])
-test_function([6, 7, 8, 2, 10, 1, 2, 3, 4], None])
-test_function([6, 7, 8, 2, 10, 1, 2, 3, 4], 800])
+test_function([[6, 7, 8, None, 10, 1, 2, 3, 4], 6])
+test_function([[6, 7, 8, 2, 10, 1, 2, 3, 4], None])
+test_function([[6, 7, 8, 2, 10, 1, 2, 3, 4], 800])

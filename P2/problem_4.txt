@@ -1,0 +1,2 @@
+In this problem a divide an conquer algorithm is used. The array is split into lo, mid, and high sections that switch with each other. This algorithim is O(n)
+time complexity with only one while loop. And a memory complexity of O(1).

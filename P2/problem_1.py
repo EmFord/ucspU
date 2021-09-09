@@ -8,9 +8,6 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
-    if not number:
-        return None
-
     if number <= 1:
         return number
 
@@ -45,15 +42,12 @@ print("Pass" if  (1 == sqrt(1)) else "Fail")
 print("Pass" if  (5 == sqrt(27)) else "Fail")
 
 # Test cases
-result = sqrt(None)
-print(result)
-assert result is None 
+result = sqrt(-44)
+assert result == -44 # does not handle negatives
 
 result = sqrt(490.56)
-print(result)
 assert result == 22.0
 
 result = sqrt(4397498732947)
-print(result)
 assert result == 2097021 
 
