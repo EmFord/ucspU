@@ -1,0 +1,1 @@
+This solution only uses one for loop and in O(n) time complexity with O(1) space complexity.
