@@ -14,26 +14,29 @@ def rotated_array_search(input_list, number):
         return -1 
 
     if len(input_list) < 1:
-        return -1 
+        return -1
 
-    low = 0
-    high = len(input_list) - 1
-    pivot_point_indx = (low+high) // 2
-    print(input_list, low, high, pivot_point_indx)
+    start = 0
+    end = len(input_list) - 1
 
-    if input_list[pivot_point_indx] == number:
-        return pivot_point_indx
+    while start <= end:
 
-    if input_list[low] <= input_list[pivot_point_indx]:
-        if input_list[low] <= number and input_list[pivot_point_indx] >= number:
-            return rotated_array_search(input_list[low:pivot_point_indx], number)
-        
-        return rotated_array_search(input_list[pivot_point_indx+1:high], number)
+        mid = (start+end) // 2
+        if input_list[mid] == number:
+            return mid
 
-    if input_list[pivot_point_indx] <= number and input_list[high] >= number:
-        return rotated_array_search(input_list[pivot_point_indx+1:high], number)
-    else:
-        return rotated_array_search(input_list[low:pivot_point_indx], number)
+        if input_list[start] <= input_list[mid]:
+            if input_list[start] <= number < input_list[mid]:
+                end = mid - 1
+            else:
+                start = mid + 1
+            
+        elif input_list[mid] < number <= input_list[end]:
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return -1
 
 
 def linear_search(input_list, number):
@@ -60,6 +63,7 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 10])
 
 
 # Tests
-test_function([[6, 7, 8, None, 10, 1, 2, 3, 4], 6])
-test_function([[6, 7, 8, 2, 10, 1, 2, 3, 4], None])
-test_function([[6, 7, 8, 2, 10, 1, 2, 3, 4], 800])
+test_function([[6, 7, 8, None, 10, 1, 2, 3, 4], 3]) # print with finding 3
+test_function([[6, 7, 8, 2, 10, 1, 2, 3, 4], None]) # returns -1 for none
+test_function([[6, 7, 8, 2, 10, 1, 2, 3, 4], 800]) # returns -1 for not in list
+
