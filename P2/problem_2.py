@@ -10,27 +10,30 @@ def rotated_array_search(input_list, number):
     """
 
 # find the pivot point (which is just the middle of the array?)
+    if number is None:
+        return -1 
+
     if len(input_list) < 1:
         return -1 
 
     low = 0
     high = len(input_list) - 1
     pivot_point_indx = (low+high) // 2
-    # print(input_list)
+    print(input_list, low, high, pivot_point_indx)
 
     if input_list[pivot_point_indx] == number:
         return pivot_point_indx
 
     if input_list[low] <= input_list[pivot_point_indx]:
         if input_list[low] <= number and input_list[pivot_point_indx] >= number:
-            return rotated_array_search(input_list[low:pivot_point_indx-1], number)
+            return rotated_array_search(input_list[low:pivot_point_indx], number)
         
         return rotated_array_search(input_list[pivot_point_indx+1:high], number)
 
     if input_list[pivot_point_indx] <= number and input_list[high] >= number:
         return rotated_array_search(input_list[pivot_point_indx+1:high], number)
     else:
-        return rotated_array_search(input_list[low:pivot_point_indx-1], number)
+        return rotated_array_search(input_list[low:pivot_point_indx], number)
 
 
 def linear_search(input_list, number):
