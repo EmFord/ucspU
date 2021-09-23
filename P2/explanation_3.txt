@@ -1,2 +1,2 @@
-Time complexity is O(log n) with one while loop and two single for loops. Space complexity is O(1) and does not require extra space.
-This solution uses a variation of bubble sort algorithm but instead of merging back to the same list, I use separate lists.
+Time complexity is O(n log n) with one while loop and two single for loops. A mergesort has a space complexity of O(n).
+This solution uses a variation of merge sort algorithm but instead of merging back to the same list, I use separate lists.

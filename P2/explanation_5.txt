@@ -1,2 +1,8 @@
-The solution for this problem is a Trie as a class with a search with only one loop for insert and find strings making if O(n) time complexity but keeps the memory
-usage to O(1).
+TrieNode class has and overall complexity of O(n) where insert has O(1) linear complexity
+and suffixes is also O(n) linear time complexity.
+
+Trie class has insert function with a time complexity of O(n). The find function is O(n) time complexity. 
+Which makes this class have O(n) time complexity.
+
+With O(n) being lowest complexity of any of the classes the overall complexity is O(n)
+with a space complexity of O(1).

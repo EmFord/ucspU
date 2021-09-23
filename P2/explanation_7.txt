@@ -1,2 +1,11 @@
-This solution also used a Trie as a class. The find and insert methods to this class has only one for loop making it O(n) for inserting and searching strings.
-Time complexity and because it is used as a class the memory is kept to O(1).
+RouteTrieNode class as on overall complexity of O(1) where insert has O(1) time complexity.
+
+RouteTrie class has and overall complexity of O(n) where insert has O(n) linear complexity
+and find is also O(n) linear time complexity.
+
+Router class has add_handler which does and insert from RouteTrie with a time complexity of O(n).
+The lookup function uses find from RouteTrie which is O(n) time complexity. Which makes this class
+have O(n) time complexity.
+
+With O(n) being lowest complexity of any of the classes the overall complexity is O(n)
+with a space complexity of O(1).
