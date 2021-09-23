@@ -1,0 +1,2 @@
+The solution for this problem is a Trie as a class with a search with only one loop for insert and find strings making if O(n) time complexity but keeps the memory
+usage to O(1).

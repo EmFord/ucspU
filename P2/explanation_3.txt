@@ -1,1 +1,2 @@
-Time complexity is O(nlog(n)) with one while loop and one for loop seperate form each other. Space complexity is O(1) and does not require extra space.
+Time complexity is O(log n) with one while loop and two single for loops. Space complexity is O(1) and does not require extra space.
+This solution uses a variation of bubble sort algorithm but instead of merging back to the same list, I use separate lists.

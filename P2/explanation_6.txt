@@ -1,1 +1,3 @@
-This solution only uses one for loop and in O(n) time complexity with O(1) space complexity.
+This solution only uses one for loop and in O(n) time complexity with O(1) space complexity. This solution uses a bubble sort variation
+because it compares the values in place, this solution made sense to me because it sorts numbers form leats to greatest without needing extra memory
+and in one pass.

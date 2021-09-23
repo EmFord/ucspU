@@ -18,7 +18,9 @@ def rearrange_digits(input_list):
                 return -1, 0
             if x > max:
                 max = x
+        # new list form greatest to smallest
         new_list.append(max)
+        # while loop so remove to shorten list
         input_list.remove(max)    
 
     a = 0
@@ -26,6 +28,8 @@ def rearrange_digits(input_list):
 
     for i in range(len(new_list)):
         if (i % 2 != 0):
+            # 22 * 10 == 220 then add new_list[i] (4) and you get 224, 
+            # that way you dont have to convert to string then back to int
             a = a * 10 + new_list[i]
         else:
             b = b * 10 + new_list[i]
